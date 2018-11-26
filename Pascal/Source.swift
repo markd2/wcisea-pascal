@@ -27,7 +27,11 @@ class Source {
     // it's their BufferedReader that's doing that. So we're not throwing _(yet)_
     // Returns EOL/EOF at end of line/file
     func currentChar() -> Char {
+
+        // First time
         if currentPosition == -2 {
+            // Starting out at -2.  readLine resets currentPosition to -1.
+            // then nextChar increments it, to zero, which is the first character.
             readLine()
             let next = nextChar()
             return next
