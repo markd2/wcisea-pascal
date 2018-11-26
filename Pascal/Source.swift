@@ -17,7 +17,8 @@ class Source {
     init(/*Reader*/) {
         line = ""
         lineNum = 0
-        currentPosition = 0
+        currentPosition = -2 // set to -2 to read the first source line. (?)
+        self.reader = reader
     }
 
     // Return the source character at the current position.
