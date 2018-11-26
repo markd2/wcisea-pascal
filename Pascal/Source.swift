@@ -40,10 +40,16 @@ class Source {
         if currentPosition == -1 || currentPosition == line?.count {
             return Source.EOL
         }
+        
+        if let count = line?.count, currentPosition > count {
+            readLine()
+            return nextChar()
+        }
 
         guard let line = line else {
-            preconditionFailure("unexpected nil line when expecting text")
+            return Source.EOF
         }
+
         let index = line.index(line.startIndex, offsetBy: currentPosition)
         return String(line[index])
     }
