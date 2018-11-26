@@ -60,7 +60,7 @@ class Source {
 
     private func characterAtIndex(_ index: Int) -> String {
         guard let line = line else {
-            preconditionFailure("huh")
+            preconditionFailure("huh") // (not code-coveraged)
         }
 
         let stringIndex = line.index(line.startIndex, offsetBy: index)
