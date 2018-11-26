@@ -15,6 +15,16 @@
 		7DBEADE521AB7CE40030041B /* BufferedReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBEADE421AB7CE40030041B /* BufferedReader.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7DBEADEF21AB7F0A0030041B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D7F3DE721A3AD2000BC93C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D7F3DEE21A3AD2000BC93C0;
+			remoteInfo = Pascal;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		7D7F3DEF21A3AD2000BC93C0 /* Pascal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pascal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7F3DF221A3AD2000BC93C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -25,10 +35,19 @@
 		7D7F3E0021A3AF0300BC93C0 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		7D7F3E0421A3B1DB00BC93C0 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		7DBEADE421AB7CE40030041B /* BufferedReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BufferedReader.swift; sourceTree = "<group>"; };
+		7DBEADEA21AB7F090030041B /* PascalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PascalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DBEADEE21AB7F0A0030041B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7D7F3DEC21A3AD2000BC93C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DBEADE721AB7F090030041B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				7D7F3DF121A3AD2000BC93C0 /* Pascal */,
+				7DBEADEB21AB7F090030041B /* PascalTests */,
 				7D7F3DF021A3AD2000BC93C0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				7D7F3DEF21A3AD2000BC93C0 /* Pascal.app */,
+				7DBEADEA21AB7F090030041B /* PascalTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +88,14 @@
 				7DBEADE421AB7CE40030041B /* BufferedReader.swift */,
 			);
 			path = Pascal;
+			sourceTree = "<group>";
+		};
+		7DBEADEB21AB7F090030041B /* PascalTests */ = {
+			isa = PBXGroup;
+			children = (
+				7DBEADEE21AB7F0A0030041B /* Info.plist */,
+			);
+			path = PascalTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,13 +118,31 @@
 			productReference = 7D7F3DEF21A3AD2000BC93C0 /* Pascal.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7DBEADE921AB7F090030041B /* PascalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DBEADF121AB7F0A0030041B /* Build configuration list for PBXNativeTarget "PascalTests" */;
+			buildPhases = (
+				7DBEADE621AB7F090030041B /* Sources */,
+				7DBEADE721AB7F090030041B /* Frameworks */,
+				7DBEADE821AB7F090030041B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DBEADF021AB7F0A0030041B /* PBXTargetDependency */,
+			);
+			name = PascalTests;
+			productName = PascalTests;
+			productReference = 7DBEADEA21AB7F090030041B /* PascalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		7D7F3DE721A3AD2000BC93C0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Borkware;
 				TargetAttributes = {
@@ -106,6 +153,10 @@
 								enabled = 0;
 							};
 						};
+					};
+					7DBEADE921AB7F090030041B = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 7D7F3DEE21A3AD2000BC93C0;
 					};
 				};
 			};
@@ -123,6 +174,7 @@
 			projectRoot = "";
 			targets = (
 				7D7F3DEE21A3AD2000BC93C0 /* Pascal */,
+				7DBEADE921AB7F090030041B /* PascalTests */,
 			);
 		};
 /* End PBXProject section */
@@ -134,6 +186,13 @@
 			files = (
 				7D7F3DF521A3AD2100BC93C0 /* Assets.xcassets in Resources */,
 				7D7F3DF821A3AD2100BC93C0 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DBEADE821AB7F090030041B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +210,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7DBEADE621AB7F090030041B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7DBEADF021AB7F0A0030041B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D7F3DEE21A3AD2000BC93C0 /* Pascal */;
+			targetProxy = 7DBEADEF21AB7F0A0030041B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7D7F3DF621A3AD2100BC93C0 /* MainMenu.xib */ = {
@@ -316,6 +390,46 @@
 			};
 			name = Release;
 		};
+		7DBEADF221AB7F0A0030041B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2HBB3G8HCG;
+				INFOPLIST_FILE = PascalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.borkware.PascalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pascal.app/Contents/MacOS/Pascal";
+			};
+			name = Debug;
+		};
+		7DBEADF321AB7F0A0030041B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2HBB3G8HCG;
+				INFOPLIST_FILE = PascalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.borkware.PascalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pascal.app/Contents/MacOS/Pascal";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -333,6 +447,15 @@
 			buildConfigurations = (
 				7D7F3DFE21A3AD2100BC93C0 /* Debug */,
 				7D7F3DFF21A3AD2100BC93C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DBEADF121AB7F0A0030041B /* Build configuration list for PBXNativeTarget "PascalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DBEADF221AB7F0A0030041B /* Debug */,
+				7DBEADF321AB7F0A0030041B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
