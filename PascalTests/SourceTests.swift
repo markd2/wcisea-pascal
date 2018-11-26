@@ -13,4 +13,10 @@ class SourceTests: XCTestCase {
         let firstPost = source.currentChar()
         XCTAssertEqual(firstPost, "b")
     }
+    
+    func testEOL() {
+        let source = sourceWith(string: "")
+        let char = source.currentChar()
+        XCTAssertEqual(char, Source.EOL)
+    }
 }
