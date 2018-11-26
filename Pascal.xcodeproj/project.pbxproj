@@ -13,6 +13,7 @@
 		7D7F3E0121A3AF0300BC93C0 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F3E0021A3AF0300BC93C0 /* Parser.swift */; };
 		7D7F3E0521A3B1DB00BC93C0 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F3E0421A3B1DB00BC93C0 /* Source.swift */; };
 		7DBEADE521AB7CE40030041B /* BufferedReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBEADE421AB7CE40030041B /* BufferedReader.swift */; };
+		7DBEADF521AB7F920030041B /* BufferedReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBEADF421AB7F920030041B /* BufferedReaderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		7DBEADE421AB7CE40030041B /* BufferedReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BufferedReader.swift; sourceTree = "<group>"; };
 		7DBEADEA21AB7F090030041B /* PascalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PascalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DBEADEE21AB7F0A0030041B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DBEADF421AB7F920030041B /* BufferedReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BufferedReaderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				7DBEADEE21AB7F0A0030041B /* Info.plist */,
+				7DBEADF421AB7F920030041B /* BufferedReaderTests.swift */,
 			);
 			path = PascalTests;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 					};
 					7DBEADE921AB7F090030041B = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 7D7F3DEE21A3AD2000BC93C0;
 					};
 				};
@@ -214,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DBEADF521AB7F920030041B /* BufferedReaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +399,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2HBB3G8HCG;
@@ -405,6 +411,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.borkware.PascalTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pascal.app/Contents/MacOS/Pascal";
 			};
@@ -414,6 +421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2HBB3G8HCG;

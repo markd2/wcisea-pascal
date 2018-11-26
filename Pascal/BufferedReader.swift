@@ -9,7 +9,7 @@ class StringReader: BufferedReader {
     private let lines: [String]
     private var currentLine = 0
 
-    init(string: String) {
+    init(_ string: String) {
         self.string = string
         lines = string.components(separatedBy: "\n")
     }
