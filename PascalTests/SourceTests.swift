@@ -40,4 +40,10 @@ class SourceTests: XCTestCase {
         let peek1again = source.peekChar()
         XCTAssertEqual(peek1again, "o")
     }
+
+    func testClose() {
+        // purely for coverage
+        let source = sourceWith(string: "snorgle")
+        source.close()
+    }
 }

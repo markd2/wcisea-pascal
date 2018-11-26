@@ -94,7 +94,7 @@ class Source {
 
     /// Closes the source
     func close() {
-        // TODO - more
+        try! reader.close()
     }
 }
 

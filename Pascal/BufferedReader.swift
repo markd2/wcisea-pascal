@@ -2,6 +2,7 @@ import Foundation
 
 protocol BufferedReader {
     func readLine() throws -> String?
+    func close() throws
 }
 
 class StringReader: BufferedReader {
@@ -20,5 +21,9 @@ class StringReader: BufferedReader {
         }
         currentLine += 1
         return lines[currentLine - 1]
+    }
+
+    func close() throws {
+        // no-op
     }
 }

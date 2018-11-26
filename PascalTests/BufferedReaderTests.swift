@@ -18,5 +18,11 @@ class BufferedReaderTests: XCTestCase {
         let offTheEnd = try! reader.readLine()
         XCTAssertNil(offTheEnd)
     }
+
+    func testClose() {
+        // Purely for coverage.
+        let reader = StringReader("Greeble")
+        try! reader.close()
+    }
 }
 
