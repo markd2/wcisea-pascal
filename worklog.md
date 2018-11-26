@@ -37,3 +37,40 @@ So, will need to learn:
 - [ ] Reading from a file line-by-line (or be lazy and just read in the whole thing)
 - [ ] Moving through this character by character
 - [ ] Best data type for "hey this is a single character" in SwiftStringLand.
+
+
+==================================================
+# Sunday November 25, 2018
+
+Adding the buffered reader, because why not.  It's an abstraction around reading
+from strings or files.  So flesh it out based on how it's used in `Source`.
+
+Plus I can start adding unit tests.  woo.
+
+Added unit test.  Xcode decided that my test-class is always failing with a reg
+sigil, but all tests pass fine. #ilyxc.  sigh.  Clearning the build folder doesn't
+work.  Have to quit Xcode.
+
+Also got a "Command MergeSwiftModule failed with non-zero success code".  #ilyx
+
+----------
+
+With that suckage out of the way, TDD in the Source junk.
+
+_many commits later_
+
+OK, got Source implemented plus more tests.
+
+Doing a coverage run. 97.8.  And that's a precondition failure at
+characterAtIndex. I can live with that.
+
+ok cool, now to continue reading after the Source implementation
+
+NEXT: Scanner on page 22.
+
+
+
+
+
+
+
