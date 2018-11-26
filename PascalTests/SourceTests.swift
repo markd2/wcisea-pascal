@@ -51,11 +51,19 @@ class SourceTests: XCTestCase {
         // the string), so assuming it's not case that actually comes up in usage.
     }
 
+    // Does an end-to-end scan, making sure we get all the things, and the
+    // special EOL / EOF characters.
     func testScan() {
         let source = sourceWith(string: "hello\nThere\n")
+
+        // Splitting the string results in three lines:
+        //  hello
+        //  There
+        //  ""
         let expectedScan = [
-          "h", "e", "l", "l", "o", Source.EOL,
-          "T", "h", "e", "r", "e", Source.EOL,
+          "h", "e", "l", "l", "o", Source.EOL,   // "hello"
+          "T", "h", "e", "r", "e", Source.EOL,   // "there"
+          Source.EOL, // ""
           Source.EOF
         ]
 
