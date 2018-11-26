@@ -66,8 +66,16 @@ class Source {
 
     /// Return the source character following the current character without consuming it.
     func peekChar() -> Char {
-        // TODO - more
-        return "x"
+        // force a sane state
+        _ = currentChar()
+        let nextPosition = currentPosition + 1
+
+        // refactor me!
+        guard let line = line else {
+            preconditionFailure("huh")
+        }
+        let index = line.index(line.startIndex, offsetBy: nextPosition)
+        return String(line[index])
     }
 
     /// Reads the next source line
