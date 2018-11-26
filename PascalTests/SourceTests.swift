@@ -26,4 +26,18 @@ class SourceTests: XCTestCase {
         let eof = source.nextChar()
         XCTAssertEqual(eof, Source.EOF)
     }
+
+    func testPeking() {
+        // peek at the beginning.  The 'current character' would be "b", so
+        // peeking at the Next would be "o"
+        let source = sourceWith(string: "bork")
+
+        // peek before scanning
+        let peek1 = source.peekChar()
+        XCTAssertEqual(peek1, "o")
+        
+        // shouldn't advance
+        let peek1again = source.peekChar()
+        XCTAssertEqual(peek1again, "o")
+    }
 }
