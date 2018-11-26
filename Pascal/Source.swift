@@ -37,19 +37,23 @@ class Source {
             return next
         }
 
-        if currentPosition == -1 || currentPosition == line?.count {
-            return Source.EOL
+        // End of file?
+        guard let line = line else {
+            return Source.EOF
         }
         
-        if let count = line?.count, currentPosition > count {
+        // End of line?
+        if currentPosition == -1 || currentPosition == line.count {
+            return Source.EOL
+        }
+
+        // Need to fetch next line?
+        if currentPosition > line.count {
             readLine()
             return nextChar()
         }
 
-        guard let line = line else {
-            return Source.EOF
-        }
-
+        // If survived, get the entity at the current position.
         let index = line.index(line.startIndex, offsetBy: currentPosition)
         return String(line[index])
     }
