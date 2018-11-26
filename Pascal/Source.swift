@@ -13,8 +13,9 @@ class Source {
     private var line = ""		// source line
     private var lineNum = 0		// current source line number
     private var currentPosition = 0	// current source line position
+    private let reader: BufferedReader
 
-    init(/*Reader*/) {
+    init(reader: BufferedReader) {
         line = ""
         lineNum = 0
         currentPosition = -2 // set to -2 to read the first source line. (?)
