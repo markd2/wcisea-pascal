@@ -69,6 +69,12 @@ class Source {
 
     /// Consume the current source character and return the next one.
     func nextChar() -> Char {
+        if currentPosition == -2 {
+            // We were called first, rather than curentChar, so make
+            // sure the pump is primed
+            return currentChar()
+        }
+
         currentPosition += 1
         return currentChar()
     }
