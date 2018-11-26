@@ -37,6 +37,10 @@ class Source {
             return next
         }
 
+        if currentPosition == -1 || currentPosition == line?.count {
+            return Source.EOL
+        }
+
         guard let line = line else {
             preconditionFailure("unexpected nil line when expecting text")
         }
