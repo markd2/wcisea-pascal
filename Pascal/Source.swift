@@ -54,8 +54,17 @@ class Source {
         }
 
         // If survived, get the entity at the current position.
-        let index = line.index(line.startIndex, offsetBy: currentPosition)
-        return String(line[index])
+        let character = characterAtIndex(currentPosition)
+        return character
+    }
+
+    private func characterAtIndex(_ index: Int) -> String{
+        guard let line = line else {
+            preconditionFailure("huh")
+        }
+
+        let stringIndex = line.index(line.startIndex, offsetBy: index)
+        return String(line[stringIndex])
     }
 
     /// Consume the current source character and return the next one.
@@ -70,12 +79,8 @@ class Source {
         _ = currentChar()
         let nextPosition = currentPosition + 1
 
-        // refactor me!
-        guard let line = line else {
-            preconditionFailure("huh")
-        }
-        let index = line.index(line.startIndex, offsetBy: nextPosition)
-        return String(line[index])
+        let character = characterAtIndex(nextPosition)
+        return character
     }
 
     /// Reads the next source line
