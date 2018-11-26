@@ -39,6 +39,16 @@ class SourceTests: XCTestCase {
         // shouldn't advance
         let peek1again = source.peekChar()
         XCTAssertEqual(peek1again, "o")
+
+        // advance and read next one.
+        let next = source.nextChar()
+        XCTAssertEqual(next, "o")
+        let peek2 = source.peekChar()
+        XCTAssertEqual(peek2, "r")
+
+        // Not testing that peeking off the end is going to give EOL/EOF
+        // (the translation of the Java implementation falls off the end of
+        // the string), so assuming it's not case that actually comes up in usage.
     }
 
     func testClose() {

@@ -58,7 +58,7 @@ class Source {
         return character
     }
 
-    private func characterAtIndex(_ index: Int) -> String{
+    private func characterAtIndex(_ index: Int) -> String {
         guard let line = line else {
             preconditionFailure("huh")
         }
