@@ -19,4 +19,11 @@ class SourceTests: XCTestCase {
         let char = source.currentChar()
         XCTAssertEqual(char, Source.EOL)
     }
+
+    func testEOF() {
+        let source = sourceWith(string: "")
+        let _ = source.currentChar()
+        let eof = source.nextChar()
+        XCTAssertEqual(eof, Source.EOF)
+    }
 }
