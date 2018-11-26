@@ -51,6 +51,20 @@ class SourceTests: XCTestCase {
         // the string), so assuming it's not case that actually comes up in usage.
     }
 
+    func testScan() {
+        let source = sourceWith(string: "hello\nThere\n")
+        let expectedScan = [
+          "h", "e", "l", "l", "o", Source.EOL,
+          "T", "h", "e", "r", "e", Source.EOL,
+          Source.EOF
+        ]
+
+        for expected in expectedScan {
+            let character = source.nextChar()
+            XCTAssertEqual(expected, character)
+        }
+    }
+
     func testClose() {
         // purely for coverage
         let source = sourceWith(string: "snorgle")
