@@ -4,7 +4,6 @@ import Foundation
 // TODO(markd, 11/19/2018) use longer names.  abbrvs sk.
 protocol SymTab: class { } 
 protocol ICode: class { }
-protocol Token: class { }
 
 /// Language-indendent.
 protocol Parser: class {

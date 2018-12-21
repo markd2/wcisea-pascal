@@ -13,6 +13,7 @@
 		7D7F3E0121A3AF0300BC93C0 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F3E0021A3AF0300BC93C0 /* Parser.swift */; };
 		7D7F3E0521A3B1DB00BC93C0 /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7F3E0421A3B1DB00BC93C0 /* Source.swift */; };
 		7D81506D21CC87A600B51CAE /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D81506C21CC87A600B51CAE /* Scanner.swift */; };
+		7D81506F21CC8E5F00B51CAE /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D81506E21CC8E5F00B51CAE /* Token.swift */; };
 		7DBEADE521AB7CE40030041B /* BufferedReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBEADE421AB7CE40030041B /* BufferedReader.swift */; };
 		7DBEADF521AB7F920030041B /* BufferedReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBEADF421AB7F920030041B /* BufferedReaderTests.swift */; };
 		7DBFD02021AB841F001C5079 /* SourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBFD01F21AB841F001C5079 /* SourceTests.swift */; };
@@ -38,6 +39,7 @@
 		7D7F3E0021A3AF0300BC93C0 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		7D7F3E0421A3B1DB00BC93C0 /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
 		7D81506C21CC87A600B51CAE /* Scanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
+		7D81506E21CC8E5F00B51CAE /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		7DBEADE421AB7CE40030041B /* BufferedReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BufferedReader.swift; sourceTree = "<group>"; };
 		7DBEADEA21AB7F090030041B /* PascalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PascalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DBEADEE21AB7F0A0030041B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				7D7F3E0421A3B1DB00BC93C0 /* Source.swift */,
 				7D81506C21CC87A600B51CAE /* Scanner.swift */,
 				7DBEADE421AB7CE40030041B /* BufferedReader.swift */,
+				7D81506E21CC8E5F00B51CAE /* Token.swift */,
 			);
 			path = Pascal;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				7D7F3E0121A3AF0300BC93C0 /* Parser.swift in Sources */,
 				7DBEADE521AB7CE40030041B /* BufferedReader.swift in Sources */,
 				7D7F3DF321A3AD2000BC93C0 /* AppDelegate.swift in Sources */,
+				7D81506F21CC8E5F00B51CAE /* Token.swift in Sources */,
 				7D81506D21CC87A600B51CAE /* Scanner.swift in Sources */,
 				7D7F3E0521A3B1DB00BC93C0 /* Source.swift in Sources */,
 			);
