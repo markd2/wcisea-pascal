@@ -69,8 +69,35 @@ ok cool, now to continue reading after the Source implementation
 NEXT: Scanner on page 22.
 
 
+==================================================
+# Thursday December 20, 2018
 
+Starting with the Scanner.  Adding Scanner.swift, and adding the stub abstract
+class.  Calling it BaseScanner.  Uses Source for getting characters.
 
+landed.
 
+Then Token - it's a base class (not an abstract class it seems).  But has
+stubs, and covers for the `Source`
 
+From the book, (page 25)
+* scanner constructs tokens, and returns to the parser.
+* TokenType is an interface, can set the type field to a language-specific
+  value _(right now placeholding for `Any` - Java is using `Object`)
+* next chapter will show how the scanner determines the type of the next token
+  to construct based n the current source character, which will become the initial
+  character for the token.
 
+e.g. if the initial chraceter is a digit, the next token is a number.  If
+the initial character is a letter, the next otken is either an identifier or a reserved
+word.
+
+Since represent different types using sublasses of the token class, scanner will
+call the constructor othe appropriate token subclass based on the initial character
+_(Maybe a Generics opportunity?)_
+
+`extract` does the actual work of constructing the token, extracts
+by reading characters. Subclasses implement this to pick up their tokens
+(this has just a single-character nommer)
+
+NEXT: continue scanner on page 26
