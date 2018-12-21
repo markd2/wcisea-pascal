@@ -12,8 +12,8 @@ class Source {
 
     // private BufferedReader reader;   // reader for the source program
     private var line: String?           // source line
-    private var lineNum = 0             // current source line number
-    private var currentPosition = 0     // current source line position
+    private(set) var lineNum = 0             // current source line number
+    private(set) var currentPosition = 0     // current source line position
     private let reader: BufferedReader
 
     init(reader: BufferedReader) {
