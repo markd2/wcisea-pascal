@@ -1,7 +1,8 @@
 import Foundation
 
+typealias Char = String // TBD: how swift represents one character
+
 class Source {
-    typealias Char = String // TBD: how swift represents one character
     
     /// End-of-Line character
     static let EOL: Char = "\n"
