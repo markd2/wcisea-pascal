@@ -3,7 +3,6 @@ import Foundation
 // placeholders until we get to them
 // TODO(markd, 11/19/2018) use longer names.  abbrvs sk.
 protocol SymTab: class { } 
-protocol Scanner: class { }
 protocol ICode: class { }
 protocol Token: class { }
 
